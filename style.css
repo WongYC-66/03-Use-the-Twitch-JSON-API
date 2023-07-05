@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
+
+html{
+  font-family: 'Share Tech Mono', monospace;
+  font-size : 16px;
+}
+body{
+  text-align : center;
+  margin : auto;
+  background-color : rgba(145,70,255,0.15);
+}
+.fa-twitch{
+  padding : 10px;
+}
+#topBar{
+  width : 50%;
+  height : 10%;
+  margin : auto;
+  margin-top : 15px;
+  background-color : #6441a5;
+  font-size : 3rem;
+  font-family: 'Kanit', sans-serif;
+  padding : 16px;
+  padding-right : 0px;
+}
+#selection{
+  display : flex;
+}
+#allBtn, #onlineBtn, #offlineBtn{
+  background-color : white;
+  padding : 0px 15px;
+  margin : 5px;
+  border-radius : 3px;
+  font-size : 10px;
+  width : 60px;
+  height : 15px;
+  transition : all 0.5s;
+}
+#streamerRow > div.show{
+  display : flex;
+  align-content: space-around;
+  width : 50%;
+  padding : 3px 15px;
+  padding-right : 0px;
+  margin: 3px auto;
+}
+#streamerRow > div.hide{
+  display: none;
+  transition : 1.0s;
+}
+img{
+  width : 75px;
+  border-radius : 50%;
+  border : 3px solid white;
+  flex-basis : 10%;
+}
+.name{
+  flex-basis : 25%;
+  align-self: center;
+  text-decoration: none;
+  color : black;
+}
+.game_play{
+  flex-basis : 65%;
+  align-self: center;
+  font-size : 0.9rem;
+  opacity : 0.75;
+}
+div.online{
+  background-color : lightgreen;
+}
+div.offline{
+  background-color : lightgray;
+}
+.name:hover{
+  cursor : pointer;
+  color : #6441a5;
+  font-size : 1.15rem;
+  font-weight : 600;
+}
+#allBtn:hover, #onlineBtn:hover, #offlineBtn:hover, #allBtn.selected, #onlineBtn.selected, #offlineBtn.selected{
+  background-color : rgba(0,0,0,0.3);
+  border : 0px solid black;
+  cursor : pointer;
+}
+#allBtn:hover::after, #allBtn.selected::after{
+  color : white;
+  content : ' ALL';
+}
+#onlineBtn:hover::after, #onlineBtn.selected::after{
+  color : white;
+  content : ' ONLINE';
+}
+#offlineBtn:hover::after, #offlineBtn.selected::after{
+  color : white;
+  content : ' OFFLINE';
+}
